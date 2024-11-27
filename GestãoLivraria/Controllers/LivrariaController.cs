@@ -23,5 +23,23 @@ namespace GestãoLivraria.Controllers
             
             return Ok(livro);
         }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(List<RequestDadosLivrariaJson>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
+        public IActionResult Show()
+        {
+            var listaDeLivros = new List<RequestDadosLivrariaJson>()
+            {
+                new RequestDadosLivrariaJson(){Id = 1, Autor = "Shakespere", Genero = "Terror", Preco = 99.90, Quantidade = 5},
+                new RequestDadosLivrariaJson(){Id = 2, Autor = "Clarice Lispector", Genero = "Romance", Preco = 59.90, Quantidade = 3},
+            }; 
+            
+            return Ok(listaDeLivros);
+        }
+
+        
+
+        
     }
 }
