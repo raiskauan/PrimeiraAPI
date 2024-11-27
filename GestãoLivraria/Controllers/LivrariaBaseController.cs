@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GestãoLivraria.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("departamento/[controller]")]
     [ApiController]
     public class LivrariaBaseController : ControllerBase
     {

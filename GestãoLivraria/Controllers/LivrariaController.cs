@@ -47,6 +47,7 @@ namespace GestãoLivraria.Controllers
         }
 
         [HttpDelete]
+        [Route("{id}")]
         [ProducesResponseType(typeof(RequestDadosLivrariaJson), StatusCodes.Status204NoContent)]
         [ProducesResponseType(typeof(string), StatusCodes.Status404NotFound)]
         public IActionResult Delete(int id)
